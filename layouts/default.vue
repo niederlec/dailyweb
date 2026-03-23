@@ -84,13 +84,10 @@ export default {
 
 <style scoped>
 #app.dark-background {
-  background:
-    radial-gradient(circle, transparent 20%, #000000 20%, #000000 80%, transparent 80%, transparent),
-    radial-gradient(circle, transparent 20%, #000000 20%, #000000 80%, transparent 80%, transparent) 50px 50px,
-    linear-gradient(#161616 4.6px, transparent 4.6px) 0 -2.3px,
-    linear-gradient(90deg, #161616 4.6px, #000000 4.6px) -2.3px 0;
-  background-size: 100px 100px, 100px 100px, 50px 50px, 50px 50px;
+  background-image:url('../assets/lake-of-books.webp');
+
 }
+
 #app.light-background {
   background:
     radial-gradient(circle, transparent 20%, #e2e2e2 20%, #e2e2e2 80%, transparent 80%, transparent),
