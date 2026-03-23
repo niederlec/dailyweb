@@ -2,6 +2,9 @@ name: deploy
 
 on: [push]
 
+env:
+  NODE_OPTIONS: "--openssl-legacy-provider"
+
 jobs:
   cd:
     runs-on: ${{ matrix.os }}
