@@ -620,4 +620,9 @@ export default {
   margin-top: 10px;
 }
 
+.v-list--two-line .v-list-item,
+.v-list-item--two-line {
+  min-height: 64px important;
+}
+
 </style>
