@@ -2,7 +2,7 @@
   <v-app id="app" :class="appClasses">
     <v-app-bar app flat>
       <v-toolbar-title class="headline">
-        Dailyweb - Team IALAC
+        Dailyweb / Team IALAC
       </v-toolbar-title>
 
       <v-spacer />
