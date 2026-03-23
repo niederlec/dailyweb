@@ -198,8 +198,15 @@
 
     <v-row>
       <v-col>
-        <v-card-title>Engagements de l'équipe</v-card-title>
-        <v-list dense shaped two-line>
+        <v-card-title>
+          <v-btn class="custom-button" @click="toggleTeamEngagementVisibility">
+            <v-icon>
+              {{ isTeamEngagementVisible ? 'mdi-chevron-down' : 'mdi-chevron-right' }}
+            </v-icon>
+            Engagements de l'équipe
+          </v-btn>
+        </v-card-title>
+        <v-list v-if="isTeamEngagementVisible" dense shaped two-line>
           <v-list-item>
             <v-list-item-icon>
               <v-icon color="primary">
@@ -370,6 +377,8 @@ export default {
       ding.volume = Math.min(100, dingVolume / 100)
     }
 
+    const isTeamEngagementVisible = true
+
     return {
       timeTracker: new TimeTrackerWorker(),
       randomizing: false,
@@ -384,7 +393,8 @@ export default {
       secondsPerPerson: settings.secondsPerPerson,
       trelloBoardId: settings?.trelloBoardId,
       trelloApiKey: settings?.trelloApiKey,
-      trelloAccessToken: settings?.trelloAccessToken
+      trelloAccessToken: settings?.trelloAccessToken,
+      isTeamEngagementVisible
     }
   },
   head () {
@@ -452,6 +462,9 @@ export default {
       }
 
       this.randomizing = false
+    },
+    toggleTeamEngagementVisibility () {
+      this.isTeamEngagementVisible = !this.isTeamEngagementVisible
     },
     addSpeaker (name) {
       this.names = this.names.filter(n => n !== name)
@@ -620,9 +633,10 @@ export default {
   margin-top: 10px;
 }
 
-.v-list--two-line .v-list-item,
-.v-list-item--two-line {
-  min-height: 64px important;
+.v-list--two-line .v-list-item, .v-list-item--two-line {
+    min-height: 0px !important;
 }
-
+.theme--dark.v-btn.v-btn--has-bg {
+  background: transparent !important;
+}
 </style>

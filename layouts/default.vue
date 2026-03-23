@@ -85,6 +85,9 @@ export default {
 <style scoped>
 #app.dark-background {
   background-image:url('../assets/lake-of-books.webp');
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center;
 
 }
 
