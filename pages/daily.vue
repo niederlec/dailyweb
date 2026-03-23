@@ -198,6 +198,46 @@
 
     <v-row>
       <v-col>
+        <v-card-title>Engagements de l'équipe</v-card-title>
+        <v-list dense shaped two-line>
+          <v-list-item>
+            <v-list-item-icon>
+              <v-icon color="primary">
+                mdi-account-multiple
+              </v-icon>
+            </v-list-item-icon>
+            <v-list-item-content>
+              <v-list-item-title class="text-large-bold">1. Faire un weekly récapitulatif en fin de semaine.</v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
+
+          <v-list-item>
+            <v-list-item-icon>
+              <v-icon color="primary">
+                mdi-drawing-box
+              </v-icon>
+            </v-list-item-icon>
+            <v-list-item-content>
+              <v-list-item-title class="text-large-bold">2. Pour chaque carte Trello, définir si besoin d'un schéma.</v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
+
+          <v-list-item>
+            <v-list-item-icon>
+              <v-icon color="primary">
+                mdi-presentation
+              </v-icon>
+            </v-list-item-icon>
+            <v-list-item-content>
+              <v-list-item-title class="text-large-bold">3. Passer en revue les slides un jour avant la sprint review.</v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
+        </v-list>
+      </v-col>
+    </v-row>
+    <v-row>
+      <v-col>
+        <v-card-title>Les règles d'or d'un daily réussi</v-card-title>
         <v-list dense shaped two-line>
           <v-list-item>
             <v-list-item-icon>
@@ -282,24 +322,19 @@ const leadExpressions = [
   ', étrange coïncidence ...',
   'commence, sois efficace',
   'contrôle le début de daily',
-  'a perdu ! Demain, croissants pour tout le monde',
   'est la star !',
   'démarre la partie',
   'mène ce début de daily',
   'perd ses cheveux',
   'lâche ce que tu fais, et commence',
   'ne veut pas commencer, mais tant pis',
-  'regrette de ne pas avoir préparé son daily',
   'regrette de ne pas être dernier',
   'est à l\'honneur',
   ', et pourquoi pas',
   'enfin, ce n\'est pas trop tôt',
   ', ça fait beaucoup là non ?',
   ', pas de chance',
-  ', encore ?',
-  ', oh non pas toi ...',
-  ', on est mal barré',
-  ', c\'est la fin des haricots'
+  ', encore ?'
 ]
 
 export default {
@@ -567,6 +602,22 @@ export default {
 
 .text-large-bold {
   font-size: 18px !important;
-  font-weight: 500 !important;
+  font-weight: 350 !important;
 }
+
+.v-card {
+  padding: 12px !important;
+}
+.v-list--two-line .v-list-item .v-list-item__avatar:not(.v-list-item__avatar--horizontal),
+.v-list--two-line .v-list-item .v-list-item__icon,
+.v-list--three-line .v-list-item .v-list-item__avatar:not(.v-list-item__avatar--horizontal),
+.v-list--three-line .v-list-item .v-list-item__icon,
+.v-list-item--two-line .v-list-item__avatar:not(.v-list-item__avatar--horizontal),
+.v-list-item--two-line .v-list-item__icon,
+.v-list-item--three-line .v-list-item__avatar:not(.v-list-item__avatar--horizontal),
+.v-list-item--three-line .v-list-item__icon {
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
 </style>
