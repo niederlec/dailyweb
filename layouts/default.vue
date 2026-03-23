@@ -87,7 +87,7 @@ export default {
   background-image:url('../assets/lake-of-books.webp');
   background-repeat: no-repeat;
   background-size: auto;
-  background-position: center;
+  background-position: center top;
 
 }
 
